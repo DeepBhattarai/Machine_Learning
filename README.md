@@ -1,7 +1,7 @@
 # Machine_Learning (ML) (Sochastic gradient descent Regression(SGDR))
 This repository describes the implementation of the SGDR to predict the taxi price(target feature) based on the different input features(predictors).
 ## Data source
-The data for the ML was extracted from the Kaggle website using the following link ()
+The data for the ML was extracted from the Kaggle website using the following link (https://www.kaggle.com/code/nani123456789/taxi-trip-fare-pre/input)
 ## Objective
 The primary objective of this project was to train the model for predicting the taxi price given multiple input features.
 ## Methodologies and requirements

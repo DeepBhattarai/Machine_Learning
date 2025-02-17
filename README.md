@@ -37,12 +37,15 @@ _**Figure 4:** MSE evolution on raw data using different learning rate._
 One of the many ways to improve the model is to perform feature engineering but in our case, this didn't have a positive impact as seen in the figure below:
 ![image](https://github.com/user-attachments/assets/e0530794-a9c5-4894-b4ad-5d4f8c785505)
 
-_**Figure 5:** MSE evolution after feature engineering of degree 2 for different learning rate._
+_**Figure 5:** MSE evolution after feature engineering of degree 2 for different learning rates._
 
 ### Tabulated weight and bias for each evaluation
 |Name|learning_rate|w1|w2|w3|w4|w5|b|
 |----|-------------|----|----|----|----|----|----|
 |Raw_data|0.01|9.01E10|-8.47*E10|-1.21*E11|-1.45*E11|8.49*E8|-6.52*E10|
+|Scaled_data|0.01|31.71|0.22|9.84|5.52|8.2|56.95|
+|Raw_data|0.0001|1.57|-2.42|12.65|2.76|0.27|-10.43|
+|Feature_engineered|0.01|9.01*E10|-8.47*E10|-1.21*E11|-1.45*E11|8.49*E8|-6.52*E10|
 
 
 

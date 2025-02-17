@@ -25,5 +25,13 @@ _**Figure 2:** Mean squared error(MSE) evolution on raw data for SGDR._
  
 _**Figure 3:** Mean squared error(MSE) evolution on scaled data._
 
-Although the algorithm seems to converge, in order to evaluate whether this improvement is due to scaling or real improvement on the model generalization a  robust metric known as root mean squared error (rmse) was used. Upon investigation, the rmse for both raw and scaled was same indicating the failure of the model to generalize on prediction taxi price.
+Although the algorithm seems to converge, in order to evaluate whether this improvement is due to scaling or real improvement on the model generalization a  robust metric known as root mean squared error (rmse) was used. Upon investigation, the rmse for both raw and scaled was the same indicating the failure of the model to generalize on prediction taxi prices.
+
+### Learning rate evaluation
+One of the key parameters for a good machine learning model is to have an optimized learning rate. As a result, different learning rates were evaluated such as 0.01(base case),0.001 and 0.0001. On learning rate of 0.01 and 0.001 no convergence was seen where as on learning rate of 0.0001 a convergence to low mse was observed. One of the downfall of using such a low learning rate could be that it is fluctuating on the local minima. So a further investigation should be conducted on it for assurance.
+![image](https://github.com/user-attachments/assets/ddb0f47e-d852-42ae-aaad-df4233f25297)
+
+_**Figure 4:** MSE evolution on raw data using different learning rate._
+
+
 

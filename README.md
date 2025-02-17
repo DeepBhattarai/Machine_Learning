@@ -25,13 +25,13 @@ _**Figure 2:** Mean squared error(MSE) evolution on raw data for SGDR._
  
 _**Figure 3:** Mean squared error(MSE) evolution on scaled data._
 
-Although the algorithm seems to converge, in order to evaluate whether this improvement is due to scaling or real improvement on the model generalization a  robust metric known as root mean squared error (rmse) was used. Upon investigation, the rmse for both raw and scaled was the same indicating the failure of the model to generalize on prediction taxi prices.
+Although the algorithm seems to converge, in order to evaluate whether this improvement is due to scaling or real improvement in the model generalization a  robust metric known as root mean squared error (_RMSE_) was used. Upon investigation, the rmse for both raw and scaled was the same indicating the failure of the model to generalize on prediction taxi prices.
 
 ### Learning rate evaluation
-One of the key parameters for a good machine learning model is to have an optimized learning rate. As a result, different learning rates were evaluated such as 0.01(base case),0.001 and 0.0001. On learning rate of 0.01 and 0.001 no convergence was seen where as on learning rate of 0.0001 a convergence to low mse was observed. One of the downfall of using such a low learning rate could be that it is fluctuating on the local minima. So a further investigation should be conducted on it for assurance.
+One of the key parameters for a good machine learning model is to have an optimized learning rate. As a result, different learning rates were evaluated such as 0.01(base case),0.001 and 0.0001. On learning rates of 0.01 and 0.001, no convergence was seen whereas on learning rate of 0.0001, a convergence to low _MSE_ was observed. One of the downfalls of using such a low learning rate could be that, it might be fluctuating on the local minima. So a further investigation should be conducted on it for assurance.
 ![image](https://github.com/user-attachments/assets/ddb0f47e-d852-42ae-aaad-df4233f25297)
 
-_**Figure 4:** MSE evolution on raw data using different learning rate._
+_**Figure 4:** MSE evolution on raw data using different learning rates._
 
 ### Feature engineering
 One of the many ways to improve the model is to perform feature engineering but in our case, this didn't have a positive impact as seen in the figure below:
@@ -46,6 +46,29 @@ _**Figure 5:** MSE evolution after feature engineering of degree 2 for different
 |Scaled_data|0.01|31.71|0.22|9.84|5.52|8.2|56.95|
 |Raw_data|0.0001|1.57|-2.42|12.65|2.76|0.27|-10.43|
 |Feature_engineered|0.01|9.01*E10|-8.47*E10|-1.21*E11|-1.45*E11|8.49*E8|-6.52*E10|
+
+## Principal composition analysis
+Since the model involves all the features that could not provide good performance I tried to reduce the dimension by performing PCA. The explained variance was more or less similar for the principal components. (This is normally done earlier to reduce the large dataset dimension I am performing this for exploratory/research purposes.)
+|Principal_Components|Explained_Variance(%)|
+|--------------------|---------------------|
+|PC1|21.6|
+|PC2|21.3|
+|PC3|19.2|
+|PC4|19.1|
+|PC5|19.0|
+
+Scores and Load diagram was created to see if there was any clustering or not. Analysing the result there was no such phenomenon observed.
+![image](https://github.com/user-attachments/assets/5838d962-ac02-4ace-a728-0f481bff448d)
+
+_**Figure 6:** Scores and Loadings plots from PCA._
+
+### Improvements and future analysis
+1. Collecting more datasets for better model representation/building.
+2. At a learning rate of 0.0001 model seems to generalize quite well. Further investigation is needed for an informed conclusion.
+
+
+
+
 
 
 
